@@ -7,7 +7,7 @@ public abstract class Player extends Character
     private String name;
 
     public Player(int attackVal, int defenseVal,
-                                int currentHealthVal, String name)
+        int currentHealthVal, String name)
     {
         super();
         this.attackVal = attackVal;
