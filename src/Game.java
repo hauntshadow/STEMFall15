@@ -9,6 +9,7 @@ public class Game
 
     String name = game.getUserName(keyboard);
     String createPlayer = game.createPlayer(keyboard);
+    System.out.println("Hi");
   }
 
   public String createPlayer(Scanner keyboard)
