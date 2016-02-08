@@ -5,21 +5,30 @@ import java.util.Scanner;
  */
 public class Game
 {
-    private Player;
+    private Player player;
+    private Scanner keyboard;
+    
+    public Game()
+    {
+        keyboard = new Scanner(System.in);
+        
+        if (player.equals("hammerer")) player = new Hammerer();
+        else if (player.equals("gunslinger")) player = new Gunslinger();
+        else if (player.equals("wielder")) player = new Wielder();
+    }
     
     public static void main(String[] args)
     {
-        Scanner keyboard = new Scanner(System.in);
         Game game = new Game();
+        game.startGame();
 
+        //playgame(keyboard);
+    }
+    
+    public void startGame()
+    {
         String name = game.getUserName(keyboard);
         String createPlayer = game.createPlayer(keyboard);
-        
-        if (createPlayer.equals("hammerer")) player = new Hammerer();
-        else if (createPlayer.equals("gunslinger")) player = new Gunslinger();
-        else if (createPlayer.equals("wielder")) player = new Wielder();
-        
-        //playgame(keyboard);
     }
     
     public void playGame(Scanner keyboard)
