@@ -21,17 +21,17 @@ public class Game
     {
         Game game = new Game();
         game.startGame();
-
+        
         //playgame(keyboard);
     }
     
     public void startGame()
     {
-        String name = game.getUserName(keyboard);
-        String createPlayer = game.createPlayer(keyboard);
+        String name = game.getUserName();
+        String createPlayer = game.createPlayer();
     }
     
-    public void playGame(Scanner keyboard)
+    public void playGame()
     {
         int level = 0;
         
@@ -41,7 +41,7 @@ public class Game
     /**
      * Create the player object for our game.
      */
-    public String createPlayer(Scanner keyboard)
+    public String createPlayer()
     {
         System.out.println("What type of character would you like to be?");
         String type;
@@ -81,7 +81,7 @@ public class Game
      * @param keyboard
      *            The scanner
      */
-    public String getUserName(Scanner keyboard)
+    public String getUserName()
     {
         System.out.print("Enter your name: ");
         return keyboard.nextLine();
