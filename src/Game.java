@@ -14,8 +14,7 @@ public class Game
         
         if (player.equals("hammerer")) player = new Hammerer();
         else if (player.equals("gunslinger")) player = new Gunslinger();
-        else if (player.equals("wielder")) player = new Wielder();
-        else System.out.println("Please pick one of the three classes");
+        
         
     }
     
