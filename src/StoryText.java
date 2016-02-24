@@ -1,36 +1,36 @@
+import java.util.concurrent.TimeUnit;
 
 public class StoryText
 {
-    private String dummyvalue = "";
-    public String intro()
-    {
-        dummyvalue = "";
-        dummyvalue += "[VOICE]Hello? It's me, Thomas Lawling...";
-        dummyvalue += "[T-MONEY]I've missed you so much... its been so long...";
-        dummyvalue += "[T-MONEY]good luck on your space mission thing... ";
-        dummyvalue += "[T-MONEY]name, if i dont see you again I...";
-        dummyvalue += "*KerChow bam PACHING BOOOOOOOOOOOOM*";
-        dummyvalue += "You wake up in a crashed spaceship, plz escape";
-        return dummyvalue;
+    private static String dummyvalue = "";
+    public static void intro()
+    { 
+        dummyvalue += "[UNKNOWN VOICE]Hello? It's me, Thomas Lawing... But you may call me T-MONEY.\n";
+        dummyvalue += "[T-MONEY]I've missed you so much... its been so long...\n";
+        dummyvalue += "[T-MONEY]good luck on your space mission thing...\n";
+        dummyvalue += "[T-MONEY]" + Game.name + ", if I don't see you again I...\n";
+        dummyvalue += "[*KerChow bam PACHING BOOOOOOOOOOOOM*]\n";
+        dummyvalue += "You wake up in a crashed spaceship, plz escape.\n";
+        typerPrint(dummyvalue);
     }
-    public String level1()
+    public static String level1()
     {
         
         dummyvalue = "";
-        dummyvalue += "You emerge, scathed and scared";
-        dummyvalue += "Looking around, you see no other human life. Desperately adjusting your transmitter";
-        dummyvalue += " you are greeted with nothing but static and the sound of well cooked spaghetti.";
-        dummyvalue += "bored, you start to read your database I textbook.";
-        dummyvalue += "after 255 seconds, your vision goes blurry, and the once barren wasteland turns into a color ";
-        dummyvalue += "that no one has ever seen before, with Dr. T in the foreground";
-        dummyvalue += "'name!' says he. 'I know you are far awau right now, but NEVER give up hope'";
-        dummyvalue += "'We believe in you name!' He then stepped to the right revealing a vision of your family";
-        dummyvalue += " happy and smiling. You're starting to tear up. 'Good Luck!' said Dr. T as he vanished";
-        dummyvalue += "after regathering your thoughts, your sense of adventure is reinvigorated";
-        dummyvalue += "despite the obstacles, you march forward confidently";
+        dummyvalue += "You emerge, scathed and scared...\n";
+        dummyvalue += "Looking around, you see no other human life. Desperately adjusting your transmitter,\n";
+        dummyvalue += " you are greeted with nothing but static and the sound of well cooked spaghetti.\n";
+        dummyvalue += "Bored, you start to read your database I textbook.\n";
+        dummyvalue += "After 255 seconds, your vision goes blurry, and the once barren wasteland turns into a color\n";
+        dummyvalue += "that no one has ever seen before, with DR. T in the foreground!\n";
+        dummyvalue += "'" + Game.name + "!' says he. 'I know you are far away right now, but NEVER give up hope'\n";
+        dummyvalue += "'We believe in you, " + Game.name + "!' He then stepped to the right revealing a vision of your family\n";
+        dummyvalue += " happy and smiling. You're starting to tear up. 'Good Luck!' says Dr. T as he vanishes.\n";
+        dummyvalue += "After collecting your thoughts, your sense of adventure is reinvigorated\n";
+        dummyvalue += "despite the obstacles, you march forward confidently\n";
         return dummyvalue;
     }
-    public String level2()
+    public static String level2()
     {
         dummyvalue = "";
         dummyvalue += "";
@@ -45,7 +45,7 @@ public class StoryText
         dummyvalue += "";
         return dummyvalue;
     }
-    public String level3()
+    public static String level3()
     {
         dummyvalue = "";
         dummyvalue += "";
@@ -60,7 +60,7 @@ public class StoryText
         dummyvalue += "";
         return dummyvalue;
     }
-    public String outro()
+    public static String outro()
     {
         dummyvalue = "";
         dummyvalue += "";
@@ -75,7 +75,7 @@ public class StoryText
         dummyvalue += "";
         return dummyvalue;
     }
-    public String bonus()
+    public static String bonus()
     {
         dummyvalue = "";
         dummyvalue += "I MADE THIS FOR YOU";
@@ -89,5 +89,38 @@ public class StoryText
         dummyvalue += "";
         dummyvalue += "";
         return dummyvalue;
+    }
+    
+    /**
+     * Prints the dialogue in a charismatic style.
+     */
+    public static void typerPrint(String s)
+    {
+        for(int i = 0; i < s.length(); i++)
+        {
+            try
+            {
+                if (s.charAt(i) == '[')
+                {
+                    int end = s.indexOf("]", i + 1);
+                    System.out.print(s.substring(i,end + 1));
+                    i = end;
+                }
+                else if (s.charAt(i) == '\n')
+                {
+                    TimeUnit.MILLISECONDS.sleep(500);
+                    System.out.print(s.charAt(i));
+                }
+                else
+                {
+                    TimeUnit.MILLISECONDS.sleep(75);
+                    System.out.print(s.charAt(i));
+                }
+            }
+            catch (InterruptedException e)
+            {
+                System.out.print(s.charAt(i));
+            }
+        }
     }
 }

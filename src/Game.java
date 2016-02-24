@@ -35,7 +35,7 @@ public class Game
     public static final Obstacle POISONOUSPLANT = new Obstacle("A friendly plant", "Possibly has medicinal purposes.");
     public static final Obstacle SHIPDEFENSE = new Obstacle("Ship defense systems", "The automated defenses responsible for keeping the ship safe.");
     
-    private String name;
+    public static String name;
     private Player player;
     private Scanner keyboard;
     private static Game game;
@@ -62,7 +62,7 @@ public class Game
     
     public void playGame()
     {
-        
+        StoryText.intro();
         
         
     }
@@ -92,14 +92,14 @@ public class Game
             {
                 type = "Gunslinger";
                 player = new Gunslinger(14, 8, 24, name);
-                System.out.println("Hammerer's Stats:\nAttack: 14\nDefense: 8\nHealth: 24");
+                System.out.println("Gunslinger's Stats:\nAttack: 14\nDefense: 8\nHealth: 24");
                 break;
             }
             else if (selected.equals("wielder"))
             {
                 type = "Wielder";
                 player = new Wielder(5, 15, 30, name);
-                System.out.println("Hammerer's Stats:\nAttack: 5\nDefense: 15\nHealth: 30");
+                System.out.println("Wielder's Stats:\nAttack: 5\nDefense: 15\nHealth: 30");
                 break;
             }
             else
@@ -113,7 +113,7 @@ public class Game
         {
             createPlayer();
         }
-        System.out.println("Good luck on your adventure " +name+ ". You will need it...");
+        System.out.println("Good luck on your adventure " +name+ ". You will need it...\n\n\n");
         return type;
     }
 
