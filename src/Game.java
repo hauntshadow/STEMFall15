@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * Launcher for the entire game.
- * 
+ *  
  * Pushed on 2/10/16
  */
 public class Game
@@ -43,11 +43,7 @@ public class Game
     
     public Game()
     {
-        keyboard = new Scanner(System.in);
-        
-        if (player.equals("hammerer")) player = new Hammerer(0, 0, 0, name);
-        else if (player.equals("gunslinger")) player = new Gunslinger(0, 0, 0, name);
-        else if (player.equals("wielder")) player = new Wielder(0, 0, 0, name);
+        keyboard = new Scanner(System.in);       
     }
     
     public static void main(String[] args)
@@ -88,16 +84,22 @@ public class Game
             if (selected.equals("hammerer"))
             {
                 type = "Hammerer";
+                player = new Hammerer(9, 9, 36, name);
+                System.out.println("Hammerer's Stats:\nAttack: 9\nDefense: 9\nHealth: 36");
                 break;
             }
             else if (selected.equals("gunslinger"))
             {
                 type = "Gunslinger";
+                player = new Gunslinger(14, 8, 24, name);
+                System.out.println("Hammerer's Stats:\nAttack: 14\nDefense: 8\nHealth: 24");
                 break;
             }
             else if (selected.equals("wielder"))
             {
                 type = "Wielder";
+                player = new Wielder(5, 15, 30, name);
+                System.out.println("Hammerer's Stats:\nAttack: 5\nDefense: 15\nHealth: 30");
                 break;
             }
             else
@@ -105,6 +107,13 @@ public class Game
                 System.out.println("INVALID CHOICE, MORTAL.");
             }
         }
+        System.out.println("Are you confident in your choice? (y/n)");
+        String a = keyboard.nextLine();
+        if(a.charAt(0) == 'n')
+        {
+            createPlayer();
+        }
+        System.out.println("Good luck on your adventure " +name+ ". You will need it...");
         return type;
     }
 
