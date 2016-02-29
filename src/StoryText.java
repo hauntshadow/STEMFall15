@@ -58,16 +58,30 @@ public class StoryText
     public static String outro()
     {
         dummyvalue = "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
-        dummyvalue += "";
+        dummyvalue += "'I never doubted you " + Game.name + "'\n";
+        dummyvalue += "Yes... It was him, or at least a vision him\n";
+        dummyvalue += "You run up to him to give him a handshake or even a hug if he would allow it\n";
+        dummyvalue += "Though you know he isnt real, you hold onto him and cry as his hand phases\n";
+        dummyvalue += "through you in an attempt to pat your back.\n";
+        dummyvalue += "Wiping away the tears with your cosmonaut spetial edition hankerchief you\n";
+        dummyvalue += "refocus and listen to what he has to say\n";
+        dummyvalue += "'From the moment you got to this planet you have had a look in your eye,\n";
+        dummyvalue += " you were scared' ... Dr. T looked down and paused with a grim look on his face\n";
+        dummyvalue += "'But, you also had the determination and hope to continue your journey' \n";
+        dummyvalue += "as he said this his face lit back up like the fourth of july and he had a smile\n";
+        dummyvalue += "that could cure cancer\n";
+        dummyvalue += "'It's not just because we belived in you' he started as your family stood next to\n";
+        dummyvalue += "you, 'It's because you believed in yourself " + Game.name + "'\n";
+        dummyvalue += "As you cry one last time on this planet, you walk towards the ship\n";
+        dummyvalue += "And waving before you go home, Dr.T and your family hold hands and sing this ballad\n";
+        dummyvalue += "...\n";
+        dummyvalue += "...\n";
+        dummyvalue += "...\n";
+        dummyvalue += "SO TELL ME WHAT YOU WANT YOU REALLY REALLY WANT\n";
+        dummyvalue += "ILL TELL YOU WHAT I WANT WHAT I REALLY REALLY WANT\n";
+        dummyvalue += "TELL ME WHAT YOU WANT WHAT YOU REALLY REALLY WANT\n";
+        dummyvalue += "ILL TELL YOU WHAT I WANT WHAT I REALLY REALLY WANT\n";
+        dummyvalue += "and thus you went home safely with many memories and a lot of information on mars\n";
         return dummyvalue;
     }
     public static String bonus()
