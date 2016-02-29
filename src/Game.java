@@ -63,9 +63,10 @@ public class Game
     public void playGame()
     {
         StoryText.intro();
+        String wat = "";
         Scanner keyboard = new Scanner(System.in);
         
-        String wat = keyboard.nextLine();
+        wat = keyboard.nextLine();
         
         StoryText.level1();
         wat = keyboard.nextLine();

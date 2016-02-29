@@ -13,7 +13,7 @@ public class StoryText
         dummyvalue += "You wake up in a crashed spaceship, plz escape.\n";
         typerPrint(dummyvalue);
     }
-    public static String level1()
+    public static void level1()
     {
         
         dummyvalue = "";
@@ -28,9 +28,9 @@ public class StoryText
         dummyvalue += " happy and smiling. You're starting to tear up. 'Good Luck!' says Dr. T as he vanishes.\n";
         dummyvalue += "After collecting your thoughts, your sense of adventure is reinvigorated\n";
         dummyvalue += "despite the obstacles, you march forward confidently\n";
-        return dummyvalue;
+        typerPrint(dummyvalue);
     }
-    public static String level2()
+    public static void level2()
     {
         dummyvalue = "It's unbelievably cold out here. So cold, in fact, that one could say it's \n"
             + "SUPER COLD. Luckily, your suit has internal heating, so you can't actualy feel it, but the \n"
@@ -38,25 +38,25 @@ public class StoryText
             + "1. There's no way you can survive out in this landscape for more than 8-10 hours.\n"
             + "2. There's a high probability that you left your oven on at home.\n\n"
             + "The ship wreckage is thrown about the landscape.\n";
-        return dummyvalue;
+        typerPrint(dummyvalue);
     }
-    public static String level3()
+    public static void level3()
     {
         dummyvalue = "";
         dummyvalue += "As you emerge from the fires of the volcano, you look over yourself and the burns you've inevitably sustained.\n";
         dummyvalue += "There's a few minor burns on your arms and hands, but other than that and a few singed hairs on your face, you've made it out alright.\n";
         dummyvalue += "You look around and begin to notice your surroundings. You don't seem to recognize any of the landmarks that you used for direction just a few hours earlier.\n";
-        dummyvalue += "The eruption has drastically changed the landscape around you. The wreckage of your ship is now covered in magma spewing from the volcano.\n";
+        dummyvalue += "The eruption has drastically changed the landscape around you. \nThe wreckage of your ship is now covered in magma spewing from the volcano.\n";
         dummyvalue += "You make your way down the rest of the slope and gradually begin walking back out into the wasteland that you fear may soon become your grave.\n";
-        dummyvalue += "You find a rock structure in the shape of a chair that looks comfortable enough to sit on and begin to contemplate your next plan of action.\n";
+        dummyvalue += "You find a rock structure in the shape of a chair that looks comfortable enough to sit on \nand begin to contemplate your next plan of action.\n";
         dummyvalue += "As you look up, you see a mirage of a ship breaking orbit and landing far away from you. It must be the heat coming from the lava paired with dehydration playing tricks on you.\n";
-        dummyvalue += "You recline back and take out your canteen, cherishing the last drops of water that emerge from it.  You think of your home back on earth, and realize you've forgotten many things you once held dear.\n";
-        dummyvalue += "It makes you think of the Mount Doom scene in the third Lord of the Rings movie, after the ring is destroyed. Although you miss your home, survival is still on your mind, so you begin to think of your next action.\n";
+        dummyvalue += "You recline back and take out your canteen, cherishing the last drops of water that emerge from it.\nYou think of your home back on earth, and realize you've forgotten many things you once held dear.\n";
+        dummyvalue += "It makes you think of the Mount Doom scene in the third Lord of the Rings movie, after the ring is destroyed. \nAlthough you miss your home, survival is still on your mind, so you begin to think of your next action.\n";
         dummyvalue += "As you gather yourself and think of the past day's events, you see a hazy vision on the horizon.\n";
         dummyvalue += "'Could it be?' you ask yourself. As he comes closer and closer, you begin to realize, it is him.\n";
-        return dummyvalue;
+        typerPrint(dummyvalue);
     }
-    public static String outro()
+    public static void outro()
     {
         dummyvalue = "";
         dummyvalue += "'I never doubted you " + Game.name + "'\n";
@@ -83,7 +83,7 @@ public class StoryText
         dummyvalue += "TELL ME WHAT YOU WANT WHAT YOU REALLY REALLY WANT\n";
         dummyvalue += "ILL TELL YOU WHAT I WANT WHAT I REALLY REALLY WANT\n";
         dummyvalue += "and thus you went home safely with many memories and a lot of information on mars\n";
-        return dummyvalue;
+        typerPrint(dummyvalue);
     }
     public static String bonus()
     {
