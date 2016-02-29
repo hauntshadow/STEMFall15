@@ -68,8 +68,11 @@ public class Game
         String wat = keyboard.nextLine();
         
         StoryText.level1();
+        wat = keyboard.nextLine();
         StoryText.level2();
+        wat = keyboard.nextLine();
         StoryText.level3();
+        wat = keyboard.nextLine();
         StoryText.outro();
     }
 
