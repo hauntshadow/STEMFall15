@@ -65,6 +65,12 @@ public class Game
         StoryText.intro();
         Scanner keyboard = new Scanner(System.in);
         
+        String wat = keyboard.nextLine();
+        
+        StoryText.level1();
+        StoryText.level2();
+        StoryText.level3();
+        StoryText.outro();
     }
 
     /**
