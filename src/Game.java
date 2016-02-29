@@ -63,7 +63,7 @@ public class Game
     public void playGame()
     {
         StoryText.intro();
-        
+        Scanner keyboard = new Scanner(System.in);
         
     }
 
