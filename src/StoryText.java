@@ -27,17 +27,20 @@ public class StoryText
         dummyvalue += "'We believe in you, " + Game.name + "!' He then stepped to the right revealing a vision of your family\n";
         dummyvalue += " happy and smiling. You're starting to tear up. 'Good Luck!' says Dr. T as he vanishes.\n";
         dummyvalue += "After collecting your thoughts, your sense of adventure is reinvigorated\n";
-        dummyvalue += "despite the obstacles, you march forward confidently\n";
+        dummyvalue += "despite the obstacles, you march forward confidently into the icy tundra.\n";
         typerPrint(dummyvalue);
     }
     public static void level2()
     {
-        dummyvalue = "It's unbelievably cold out here. So cold, in fact, that one could say it's \n"
-            + "SUPER COLD. Luckily, your suit has internal heating, so you can't actualy feel it, but the \n"
-            + "seemingly infinite plane of ice sort of gives it away. At this point, you realize two important things:"
-            + "1. There's no way you can survive out in this landscape for more than 8-10 hours.\n"
-            + "2. There's a high probability that you left your oven on at home.\n\n"
-            + "The ship wreckage is thrown about the landscape.\n";
+        dummyvalue = "You've made it. After days of climbing, you've finally reached the summit of the volcano.\n"
+            + "All that's left is to descend the other side and you'll be... well, somewhere. There's a good chance that\n"
+            + "anywhere is better than here. What you don't realize, though, is two things:\n"
+            + "1. This volcano is home to one of the most viscious RABID MARTIANS on Mars\n"
+            + "2. The ledge you're standing on is about to collapse and drop you right into their base.\n"
+            + "I suggest you...\n"
+            + "*KerChow bam PACHING BOOOOOOOOOOOOM*\n"
+            + "\n\nWell, that could have gone better. You are now tied to the wall in a room full of\n"
+            + "RABID MARTIANS. I suggest you act quickly.";
         typerPrint(dummyvalue);
     }
     public static void level3()
@@ -48,10 +51,10 @@ public class StoryText
         dummyvalue += "You look around and begin to notice your surroundings. You don't seem to recognize any of the landmarks that you used for direction just a few hours earlier.\n";
         dummyvalue += "The eruption has drastically changed the landscape around you. \nThe wreckage of your ship is now covered in magma spewing from the volcano.\n";
         dummyvalue += "You make your way down the rest of the slope and gradually begin walking back out into the wasteland that you fear may soon become your grave.\n";
-        dummyvalue += "You find a rock structure in the shape of a chair that looks comfortable enough to sit on \nand begin to contemplate your next plan of action.\n";
+        dummyvalue += "You find a rock structure in the shape of a chair that looks comfortable enough to sit on\nand begin to contemplate your next plan of action.\n";
         dummyvalue += "As you look up, you see a mirage of a ship breaking orbit and landing far away from you. It must be the heat coming from the lava paired with dehydration playing tricks on you.\n";
         dummyvalue += "You recline back and take out your canteen, cherishing the last drops of water that emerge from it.\nYou think of your home back on earth, and realize you've forgotten many things you once held dear.\n";
-        dummyvalue += "It makes you think of the Mount Doom scene in the third Lord of the Rings movie, after the ring is destroyed. \nAlthough you miss your home, survival is still on your mind, so you begin to think of your next action.\n";
+        dummyvalue += "It makes you think of the Mount Doom scene in the third Lord of the Rings movie, after the ring is destroyed.\nAlthough you miss your home, survival is still on your mind, so you begin to think of your next action.\n";
         dummyvalue += "As you gather yourself and think of the past day's events, you see a hazy vision on the horizon.\n";
         dummyvalue += "'Could it be?' you ask yourself. As he comes closer and closer, you begin to realize, it is him.\n";
         typerPrint(dummyvalue);
