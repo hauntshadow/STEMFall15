@@ -103,7 +103,6 @@ public class StoryText
         dummyvalue += "";
         return dummyvalue;
     }
-    
     /**
      * Prints the dialogue in a charismatic style.
      */
