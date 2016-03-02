@@ -63,11 +63,11 @@ public class StoryText
     {
         dummyvalue = "";
         dummyvalue += "'I never doubted you " + Game.name + "'\n";
-        dummyvalue += "Yes... It was him, or at least a vision him\n";
+        dummyvalue += "Yes... It was him, or at least a vision of him\n";
         dummyvalue += "You run up to him to give him a handshake or even a hug if he would allow it\n";
         dummyvalue += "Though you know he isnt real, you hold onto him and cry as his hand phases\n";
         dummyvalue += "through you in an attempt to pat your back.\n";
-        dummyvalue += "Wiping away the tears with your cosmonaut spetial edition hankerchief you\n";
+        dummyvalue += "Wiping away the tears with your cosmonaut special edition hankerchief you\n";
         dummyvalue += "refocus and listen to what he has to say\n";
         dummyvalue += "'From the moment you got to this planet you have had a look in your eye,\n";
         dummyvalue += " you were scared' ... Dr. T looked down and paused with a grim look on his face\n";
