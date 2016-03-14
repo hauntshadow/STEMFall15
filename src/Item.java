@@ -33,4 +33,16 @@ public class Item
     {
         this.description = description;
     }
+    public boolean equals(String x)
+    {
+        if (getName() == x)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
 }
