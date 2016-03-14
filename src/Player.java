@@ -23,4 +23,34 @@ public abstract class Player extends Character
     {
         return inventory;
     }
+    
+    public void displayInventory()
+    {
+        for (int i = 0; i < inventory.size(); i++)
+        {
+            System.out.println("Slot " + i + ": " + inventory.get(i).getName()
+                + ": " + inventory.get(i).getDescription());
+        }
+    }
+    
+    public void use(int i)
+    {
+        if (i > 0 && i < inventory.size())
+        {
+            Item item = inventory.get(i);
+        }
+    }
+    
+    public boolean has(Item item)
+    {
+        boolean found = false;
+        for (Item i : inventory)
+        {
+            if (i.equals(item))
+            {
+                found = true;
+            }
+        }
+        return found;
+    }
 }
