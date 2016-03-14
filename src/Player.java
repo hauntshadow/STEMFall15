@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public abstract class Player extends Character
 {
     private int maxHealthVal;
@@ -5,6 +6,7 @@ public abstract class Player extends Character
     private int defenseVal;
     private int currentHealthVal;
     private String name;
+    private ArrayList<Item> inventory;
 
     public Player(int attackVal, int defenseVal,
         int currentHealthVal, String name)
@@ -14,5 +16,11 @@ public abstract class Player extends Character
         this.defenseVal = defenseVal;
         this.currentHealthVal = currentHealthVal;
         this.name = name;
+        inventory = new ArrayList<Item>();
+    }
+    
+    public ArrayList<Item> getInventory()
+    {
+        return inventory;
     }
 }
