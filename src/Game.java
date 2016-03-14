@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * Launcher for the entire game.
@@ -23,7 +24,7 @@ public class Game
     public static final Item PIZZA = new Item("Mars Pizza","Delicious pizza! Grown and cooked on Mars.");
     public static final Item FOODBAR = new Item("Martian Bar","A tasty treat that will also restore some health.");
     public static final Item WATER = new Item("Water","H20.");
-    
+    //Obstacles
     public static final Obstacle BATS = new Obstacle("Bats", "A swarm of bats attacks!");
     public static final Obstacle PITFALL = new Obstacle("Pitfall", "A pit that you fall into.");
     public static final Obstacle ROCKSLIDE = new Obstacle("Rock Slide", "A slide of rocks!");
@@ -75,6 +76,74 @@ public class Game
         StoryText.level3();
         wat = keyboard.nextLine();
         StoryText.outro();
+    }
+    
+    public void makeMove(String move)
+    {
+        if (move.equals("up"))
+        {
+            
+        }
+        if (move.equals("down"))
+        {
+            
+        }
+        if (move.equals("left"))
+        {
+            
+        }
+        if (move.equals("right"))
+        {
+            
+        }
+        if (move.equals("give up"))
+        {
+            
+        }
+        if (move.equals("analyze"))
+        {
+            
+        }
+        if (move.equals("pickup") || move.equals("open"))
+        {
+            
+        }
+        if (move.equals("bag"))
+        {
+            
+        }
+        if (move.equals("attack"))
+        {
+            
+        }
+        if (move.equals("defend"))
+        {
+            
+        }
+        if (move.equals("item"))
+        {
+            player.displayInventory();
+            System.out.println("What item would you like to use?");
+            try
+            {
+                int i = keyboard.nextInt();
+                player.use(i);
+            }
+            catch(Exception e)
+            {
+                System.out.println("invalid input");
+                makeMove("item");
+            }
+            
+        }
+        if (move.equals("run"))
+        {
+            
+        }
+        if (move.equals("help plz"))
+        {
+            
+        }
     }
 
     /**
