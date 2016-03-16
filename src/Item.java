@@ -35,7 +35,7 @@ public class Item
     }
     public boolean equals(String x)
     {
-        if (getName() == x)
+        if (getName().equals(x))
         {
             return true;
         }
