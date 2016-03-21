@@ -48,7 +48,7 @@ public class Room
 		return obstacle;
 	}
 
-	public Item[] getItems() {
+	public Item getItems() {
 		return items;
 	}
 	
@@ -69,7 +69,7 @@ public class Room
 		this.obstacle= obstacle;
 	}
 
-	public void setItems(Item[] items) {
+	public void setItems(Item items) {
 		this.items = items;
 	}
 	
