@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-
+import java.util.LinkedList;
 /**
  * Launcher for the entire game.
  *  
@@ -40,7 +40,7 @@ public class Game
     private Player player;
     private Scanner keyboard;
     private static Game game;
-    
+    private Level currentLevel;
     
     public Game()
     {
@@ -82,19 +82,59 @@ public class Game
     {
         if (move.equals("up"))
         {
-            
+            LinkedList<Room> j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
+            for (int i = 0; i < j.size(); i++)
+            {
+                System.out.println(i + ". " + j.get(i).getId());
+            }
+            System.out.println("Choose a room: ");
+            int choice = keyboard.nextInt();
+            if (choice >= 0 && choice < j.size())
+            {
+                currentLevel.moveCurrentRoom(choice);
+            }
         }
         if (move.equals("down"))
         {
-            
+            LinkedList<Room> j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
+            for (int i = 0; i < j.size(); i++)
+            {
+                System.out.println(i + ". " + j.get(i).getId());
+            }
+            System.out.println("Choose a room: ");
+            int choice = keyboard.nextInt();
+            if (choice >= 0 && choice < j.size())
+            {
+                currentLevel.moveCurrentRoom(choice);
+            }
         }
         if (move.equals("left"))
         {
-            
+            LinkedList<Room> j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
+            for (int i = 0; i < j.size(); i++)
+            {
+                System.out.println(i + ". " + j.get(i).getId());
+            }
+            System.out.println("Choose a room: ");
+            int choice = keyboard.nextInt();
+            if (choice >= 0 && choice < j.size())
+            {
+                currentLevel.moveCurrentRoom(choice);
+            }
         }
         if (move.equals("right"))
         {
-            
+            LinkedList<Room> j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
+            for (int i = 0; i < j.size(); i++)
+            {
+                System.out.println(i + ". " + j.get(i).getId());
+            }
+            System.out.println("Choose a room: ");
+            int choice = keyboard.nextInt();
+            if (choice >= 0 && choice < j.size())
+            {
+                currentLevel.moveCurrentRoom(choice);
+            }
         }
         if (move.equals("give up"))
         {

@@ -88,7 +88,7 @@ public class Level
 		return rooms[current].getAdjRooms();
 	}
 	
-	public void moveCurentRoom(int index)
+	public void moveCurrentRoom(int index)
 	{
 	    Room room = getAvailableRooms(current).get(index);
 	    
