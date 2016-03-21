@@ -5,9 +5,37 @@ public class Room
   private String id;
   private String description;
   private Obstacle obstacle;
-  private Item[] items;
+  private Item items;
   private LinkedList<Room> adjRooms;
-
+    
+    public Room(String s, String s2, LinkedList<Room> adj)
+    {
+        id = s;
+        description = s2;
+        adjRooms = adj;
+    }
+    public Room(String s, String s2, Obstacle o, Item i, LinkedList<Room> adj)
+    {
+       id = s;
+       description = s2;
+       obstacle = o;
+       items = i;
+       adjRooms = adj;
+    }
+    public Room(String s, String s2, Obstacle o, LinkedList<Room> adj)
+    {
+        id = s;
+        description = s2;
+        obstacle = o;
+        adjRooms = adj;
+    }
+    public Room(String s, String s2, Item i, LinkedList<Room> adj)
+    {
+        id = s;
+        description = s2;
+        items = i;
+        adjRooms = adj;
+    }
 	public String getId() {
 		return id;
 	}
