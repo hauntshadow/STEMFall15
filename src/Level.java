@@ -32,7 +32,6 @@ public class Level
 	public Room[] getRoom() {
 		return rooms;
 	}
-	
 
 	public String getDestination() {
 		return destination;
@@ -89,9 +88,17 @@ public class Level
 		return rooms[current].getAdjRooms();
 	}
 	
-	public void moveCuurentRoom(int current, Room newRoom)
+	public void moveCurentRoom(int index)
 	{
+	    Room room = getAvailableRooms(current).get(index);
 	    
+	    for (int i = 0; i < rooms.length; i++)
+	    {
+	        if (room == rooms[i])
+	        {
+	            current = i;
+	            break;
+	        }
+	    }
 	}
-	
 }
