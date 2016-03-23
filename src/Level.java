@@ -6,7 +6,19 @@ public class Level
   private Room[] rooms;
   private String destination;
   private int current;
-	
+  
+  public Level(Room[] rooms, Item[] items, Obstacle[] obstacles, String destination)
+  {
+      this.rooms = rooms;
+      this.items = items;
+      this.obstacles = obstacles;
+      current = 0;
+      this.destination = destination;
+      
+      putObstaclesInRooms(this.obstacles, this.rooms);
+      putItemsInRooms(this.items, this.rooms);
+  }
+  
   public void putObstaclesInRooms(Obstacle[] obstacles, Room[] rooms)
   {
  	 Random rnd = new Random();
@@ -53,15 +65,15 @@ public class Level
 		this.current = current;
 	}
 	
-	public ArrayList<Integer> findItem(Item item)
+	public ArrayList<String> findItem(Item item)
 	{
-		ArrayList<Integer> foo = new ArrayList<Integer>();
+		ArrayList<String> foo = new ArrayList<String>();
 		for(int i = 0; i < rooms.length; i++ )
 		{
-			//if(item.getName() == rooms[i].getItems().getName())
-			//{
-			//	foo.add(rooms[i].getId());
-			//}
+		    if(item.equals(rooms[i].getItems()))
+		    {
+		        foo.add(rooms[i].getId());
+			}
 		}
 		return foo;
 	}
