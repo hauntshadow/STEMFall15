@@ -25,7 +25,7 @@ public class Level
   	for (Item item: items)
   	{
     	int i = rnd.nextInt(rooms.length - 1) + 1;
-    	rooms[i].setItems(items);
+    	rooms[i].setItems(item);
   	}
   }
 	
