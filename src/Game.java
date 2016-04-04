@@ -28,7 +28,7 @@ public class Game
     public static final Obstacle BATS = new Obstacle("Bats", "A swarm of bats attacks!");
     public static final Obstacle PITFALL = new Obstacle("Pitfall", "A pit that you fall into.");
     public static final Obstacle ROCKSLIDE = new Obstacle("Rock Slide", "A slide of rocks!");
-    public static final Obstacle ADICPUDDLE = new Obstacle("Acid Puddle", "You probably should not step in this.");
+    public static final Obstacle ACIDPUDDLE = new Obstacle("Acid Puddle", "You probably should not step in this.");
     public static final Obstacle ANDROIDS = new Obstacle("Androids", "A squad of lethal android assassians.");
     public static final Obstacle SIREN = new Obstacle("Siren", "Try asking it to sing.");
     public static final Obstacle PIRATES = new Obstacle("Space Pirates", "Hide yer booty.");
