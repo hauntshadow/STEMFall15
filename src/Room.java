@@ -12,6 +12,8 @@ public class Room
     {
         id = s;
         description = s2;
+        obstacle = null;
+        items = null;
         adjRooms = adj;
     }
     public Room(String s, String s2, Obstacle o, Item i, LinkedList<Room> adj)
@@ -27,12 +29,14 @@ public class Room
         id = s;
         description = s2;
         obstacle = o;
+        items = null;
         adjRooms = adj;
     }
     public Room(String s, String s2, Item i, LinkedList<Room> adj)
     {
         id = s;
         description = s2;
+        obstacle = null;
         items = i;
         adjRooms = adj;
     }
