@@ -52,6 +52,11 @@ public class Level
 	public int getCurrent() {
 		return current;
 	}
+	
+	public Room getCurrentRoom()
+	{
+	    return rooms[getCurrent()];
+	}
 
 	public void setRoom(Room[] rooms) {
 		this.rooms = rooms;

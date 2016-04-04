@@ -40,7 +40,7 @@ public abstract class Player extends Character
             Item item = inventory.get(i);
         }
     }
-    
+
     public boolean has(Item item)
     {
         boolean found = false;
