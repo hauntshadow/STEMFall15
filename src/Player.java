@@ -24,6 +24,11 @@ public abstract class Player extends Character
         return inventory;
     }
     
+    public void addToInventory(Item i)
+    {
+        inventory.add(i);
+    }
+    
     public void displayInventory()
     {
         for (int i = 0; i < inventory.size(); i++)

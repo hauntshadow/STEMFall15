@@ -138,19 +138,28 @@ public class Game
         }
         if (move.equals("give up"))
         {
-            
+            System.exit(0);
         }
         if (move.equals("analyze"))
         {
-            
+            System.out.println(currentLevel.getCurrentRoom().getId());
+            System.out.println(currentLevel.getCurrentRoom().getDescription());
         }
-        if (move.equals("pickup") || move.equals("open"))
+        if (move.equals("pickup"))
+        {
+            if (currentLevel.getCurrentRoom().getItems() != null)
+            {
+                player.addToInventory(currentLevel.getCurrentRoom().getItems());
+                currentLevel.getCurrentRoom().setItems(null);
+            }
+        }
+        if (move.equals("open"))
         {
             
         }
         if (move.equals("bag"))
         {
-            
+            player.displayInventory();
         }
         if (move.equals("attack"))
         {
@@ -180,9 +189,22 @@ public class Game
         {
             
         }
-        if (move.equals("help plz"))
+        if (move.equals("help"))
         {
-            
+            System.out.println("up: Moves the player up a room");
+            System.out.println("down: Moves the player down a room");
+            System.out.println("left: Moves the player left a room");
+            System.out.println("right: Moves the player right a room");
+            System.out.println("analyze: Describes the player's current room");
+            System.out.println("pickup: Adds the items in the room to the player's inventory");
+            System.out.println("open: ");
+            System.out.println("bag: Displays the player's inventory");
+            System.out.println("attack: ");
+            System.out.println("defend: ");
+            System.out.println("item: Allows the player to use an item from their inventory");
+            System.out.println("run: ");
+            System.out.println("give up: Ends the game");
+            System.out.println("help: Prints all possible player commands");
         }
     }
 
