@@ -1,14 +1,12 @@
-import java.util.LinkedList;
-
 public class Room
 {
   private String id;
   private String description;
   private Obstacle obstacle;
   private Item items;
-  private LinkedList<Room> adjRooms;
+  private Room[] adjRooms;
     
-    public Room(String s, String s2, LinkedList<Room> adj)
+    public Room(String s, String s2, Room[] adj)
     {
         id = s;
         description = s2;
@@ -16,7 +14,7 @@ public class Room
         items = null;
         adjRooms = adj;
     }
-    public Room(String s, String s2, Obstacle o, Item i, LinkedList<Room> adj)
+    public Room(String s, String s2, Obstacle o, Item i, Room[] adj)
     {
        id = s;
        description = s2;
@@ -24,7 +22,7 @@ public class Room
        items = i;
        adjRooms = adj;
     }
-    public Room(String s, String s2, Obstacle o, LinkedList<Room> adj)
+    public Room(String s, String s2, Obstacle o, Room[] adj)
     {
         id = s;
         description = s2;
@@ -32,7 +30,7 @@ public class Room
         items = null;
         adjRooms = adj;
     }
-    public Room(String s, String s2, Item i, LinkedList<Room> adj)
+    public Room(String s, String s2, Item i, Room[] adj)
     {
         id = s;
         description = s2;
@@ -56,7 +54,7 @@ public class Room
 		return items;
 	}
 	
-	public LinkedList<Room> getAdjRooms()
+	public Room[] getAdjRooms()
 	{
 		return adjRooms;
 	}
@@ -77,7 +75,7 @@ public class Room
 		this.items = items;
 	}
 	
-	public void setAdjRooms(LinkedList<Room> adjRooms)
+	public void setAdjRooms(Room[] adjRooms)
 	{
 		this.adjRooms = adjRooms;
 	}

@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Level
 {
   private Item[] items;
@@ -100,14 +102,14 @@ public class Level
       			itemRooms.add(r);
   		return itemRooms;
 	}
-    public LinkedList<Room> getAvailableRooms(int current)
+    public Room[] getAvailableRooms(int current)
 	{
 		return rooms[current].getAdjRooms();
 	}
 	
 	public void moveCurrentRoom(int index)
 	{
-	    Room room = getAvailableRooms(current).get(index);
+	    Room room = getAvailableRooms(current)[index];
 	    
 	    for (int i = 0; i < rooms.length; i++)
 	    {
