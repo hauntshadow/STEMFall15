@@ -71,7 +71,10 @@ public class Level
 	public void setCurrent(int current) {
 		this.current = current;
 	}
-	
+	public boolean isLevelOver()
+	{
+	    return destination.equals(rooms[current].getId());
+	}
 	public ArrayList<String> findItem(Item item)
 	{
 		ArrayList<String> foo = new ArrayList<String>();
