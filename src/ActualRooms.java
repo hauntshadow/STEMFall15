@@ -93,31 +93,31 @@ public class ActualRooms
     {
         Room[] rooms = {r26, r27, r28, r29, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41,
                 r42, r43, r44, r45, r46, r47, r48, r49, r50};
-        r26.setAdjRooms(new Room[]{});
-        r27.setAdjRooms(new Room[]{});
-        r28.setAdjRooms(new Room[]{});
-        r29.setAdjRooms(new Room[]{});
-        r30.setAdjRooms(new Room[]{});
-        r31.setAdjRooms(new Room[]{});
-        r32.setAdjRooms(new Room[]{});
-        r33.setAdjRooms(new Room[]{});
-        r34.setAdjRooms(new Room[]{});
-        r35.setAdjRooms(new Room[]{});
-        r36.setAdjRooms(new Room[]{});
-        r37.setAdjRooms(new Room[]{});
-        r38.setAdjRooms(new Room[]{});
-        r39.setAdjRooms(new Room[]{});
-        r40.setAdjRooms(new Room[]{});
-        r41.setAdjRooms(new Room[]{});
-        r42.setAdjRooms(new Room[]{});
-        r43.setAdjRooms(new Room[]{});
-        r44.setAdjRooms(new Room[]{});
-        r45.setAdjRooms(new Room[]{});
-        r46.setAdjRooms(new Room[]{});
-        r47.setAdjRooms(new Room[]{});
-        r48.setAdjRooms(new Room[]{});
-        r49.setAdjRooms(new Room[]{});
-        r50.setAdjRooms(new Room[]{});
+        r26.setAdjRooms(new Room[]{r27, r31});
+        r27.setAdjRooms(new Room[]{r26, r28, r32});
+        r28.setAdjRooms(new Room[]{r27, r29, r33});
+        r29.setAdjRooms(new Room[]{r28, r30, r34});
+        r30.setAdjRooms(new Room[]{r29, r35});
+        r31.setAdjRooms(new Room[]{r26, r32, r36});
+        r32.setAdjRooms(new Room[]{r27, r31, r33, r37});
+        r33.setAdjRooms(new Room[]{r28, r32, r34, r38});
+        r34.setAdjRooms(new Room[]{r29, r33, r35, r39});
+        r35.setAdjRooms(new Room[]{r30, r34, r40});
+        r36.setAdjRooms(new Room[]{r31, r37, r41});
+        r37.setAdjRooms(new Room[]{r32, r36, r38, r42});
+        r38.setAdjRooms(new Room[]{r33, r37, r39, r43});
+        r39.setAdjRooms(new Room[]{r34, r38, r40, r44});
+        r40.setAdjRooms(new Room[]{r35, r39, r45});
+        r41.setAdjRooms(new Room[]{r36, r42, r46});
+        r42.setAdjRooms(new Room[]{r37, r41, r43, r47});
+        r43.setAdjRooms(new Room[]{r38, r42, r44, r48});
+        r44.setAdjRooms(new Room[]{r39, r43, r45, r49});
+        r45.setAdjRooms(new Room[]{r40, r44, r50});
+        r46.setAdjRooms(new Room[]{r41, r47});
+        r47.setAdjRooms(new Room[]{r42, r46, r48});
+        r48.setAdjRooms(new Room[]{r43, r47, r49});
+        r49.setAdjRooms(new Room[]{r44, r48, r50});
+        r50.setAdjRooms(new Room[]{r45, r49});
         
         return new Level(rooms, null, null, "c25");
     }
