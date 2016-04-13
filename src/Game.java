@@ -67,14 +67,30 @@ public class Game
         String wat = "";
         Scanner keyboard = new Scanner(System.in);
         
-        wat = keyboard.nextLine();
-        
+        ActualRooms actual = new ActualRooms();
+        Level L1 = actual.getLevel1();
+        while (!L1.isLevelOver())
+        {
+            wat = keyboard.nextLine();
+            makeMove(wat);
+        }
         StoryText.level1();
-        wat = keyboard.nextLine();
+        
+        Level L2 = actual.getLevel2();
+        while (!L2.isLevelOver())
+        {
+            wat = keyboard.nextLine();
+            makeMove(wat);
+        }
         StoryText.level2();
-        wat = keyboard.nextLine();
+        
+        Level L3 = actual.getLevel3();
+        while (!L3.isLevelOver())
+        {
+            wat = keyboard.nextLine();
+            makeMove(wat);
+        }
         StoryText.level3();
-        wat = keyboard.nextLine();
         StoryText.outro();
     }
     

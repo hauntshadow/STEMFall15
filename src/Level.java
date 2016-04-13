@@ -17,8 +17,8 @@ public class Level
       current = 0;
       this.destination = destination;
       
-      putObstaclesInRooms(this.obstacles, this.rooms);
-      putItemsInRooms(this.items, this.rooms);
+      //putObstaclesInRooms(this.obstacles, this.rooms);
+      //putItemsInRooms(this.items, this.rooms);
   }
   
   public void putObstaclesInRooms(Obstacle[] obstacles, Room[] rooms)
