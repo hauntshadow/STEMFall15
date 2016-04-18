@@ -1,15 +1,15 @@
 import java.util.LinkedList;
 public class ActualRooms 
 {
-    public static final Room r1 = new Room("a1", "A room in level 1\nThe starting point in level 1", new Room[4]);
-    public static final Room r2 = new Room("a2", "A room in level 1\n", new Room[4]);
-    public static final Room r3 = new Room("a3", "A room in level 1\n", new Room[4]);
-    public static final Room r4 = new Room("a4", "A room in level 1\n", new Room[4]);
-    public static final Room r5 = new Room("a5", "A room in level 1\n", new Room[4]);
-    public static final Room r6 = new Room("a6", "A room in level 1\n", new Room[4]);
-    public static final Room r7 = new Room("a7", "A room in level 1\n", new Room[4]);
-    public static final Room r8 = new Room("a8", "A room in level 1\n", new Room[4]);
-    public static final Room r9 = new Room("a9", "A room in level 1\nThe ending point in level 1", new Room[4]);
+    public static final Room r1 = new Room("Cryogenic Chamber", "The room where astronauts are stored during long flights.\n", new Room[4]);
+    public static final Room r2 = new Room("Lavoraty", "There is generally only one use for this room, but knows, the crash may have jostled some things around.\n", new Room[4]);
+    public static final Room r3 = new Room("Broom Closet", "In hindsight, it was probably not necessary to bring this many brooms...\n", new Room[4]);
+    public static final Room r4 = new Room("Food Storage", "All the food you could ever imagine...\n\n\nIn one heap of ashes.\n", new Room[4]);
+    public static final Room r5 = new Room("Analysis Room", "This is where the science happens.\n", new Room[4]);
+    public static final Room r6 = new Room("Lounge", "You could just stay in here forever... There's a comfy couch.\n", new Room[4]);
+    public static final Room r7 = new Room("Cockpit", "This room is where the pilots sit while the computer pilots the ship.\n", new Room[4]);
+    public static final Room r8 = new Room("Hangar", "There is an assortment of broken vehicles around you.\n", new Room[4]);
+    public static final Room r9 = new Room("Airlock", "The last room before you can go outside.\n", new Room[4]);
     public static final Room r10 = new Room("b1", "A room in level 2\nThe starting point in level 2", new Room[4]);
     public static final Room r11 = new Room("b2", "A room in level 2\n", new Room[4]);
     public static final Room r12 = new Room("b3", "A room in level 2\n", new Room[4]);
@@ -65,7 +65,7 @@ public class ActualRooms
         r8.setAdjRooms(new Room[]{r5, r7, r9});
         r9.setAdjRooms(new Room[]{r6, r8});
         
-        return new Level(rooms, null, null, "a9");
+        return new Level(rooms, null, null, "Airlock");
     }
     public Level getLevel2()
     {

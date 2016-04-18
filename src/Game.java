@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Random;
 /**
  * Launcher for the entire game.
  *  
@@ -44,7 +45,7 @@ public class Game
     
     public Game()
     {
-        keyboard = new Scanner(System.in);       
+        keyboard = new Scanner(System.in);
     }
     
     public static void main(String[] args)
@@ -68,24 +69,24 @@ public class Game
         Scanner keyboard = new Scanner(System.in);
         
         ActualRooms actual = new ActualRooms();
-        Level L1 = actual.getLevel1();
-        while (!L1.isLevelOver())
+        currentLevel = actual.getLevel1();
+        while (!currentLevel.isLevelOver())
         {
             wat = keyboard.nextLine();
             makeMove(wat);
         }
         StoryText.level1();
         
-        Level L2 = actual.getLevel2();
-        while (!L2.isLevelOver())
+        currentLevel = actual.getLevel2();
+        while (!currentLevel.isLevelOver())
         {
             wat = keyboard.nextLine();
             makeMove(wat);
         }
         StoryText.level2();
         
-        Level L3 = actual.getLevel3();
-        while (!L3.isLevelOver())
+        currentLevel = actual.getLevel3();
+        while (!currentLevel.isLevelOver())
         {
             wat = keyboard.nextLine();
             makeMove(wat);
@@ -96,7 +97,36 @@ public class Game
     
     public void makeMove(String move)
     {
-        if (move.equals("up"))
+        if (move.equals("move"))
+        {
+            Room[] j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
+            for (int i = 0; i < j.length; i++)
+            {
+                System.out.println(i + ". " + j[i].getId());
+            }
+            System.out.println("Choose a room: ");
+            String floob = keyboard.next();
+            try
+            {
+                int choice = Integer.parseInt(floob);
+                if (choice >= 0 && choice < j.length)
+                {
+                    currentLevel.moveCurrentRoom(choice);
+                    System.out.println(currentLevel.getCurrentRoom().getId());
+                    System.out.println(currentLevel.getCurrentRoom().getDescription());
+                }
+                else
+                {
+                    System.out.println("The room is locked and/or does not actually exist");
+                }
+            }
+            catch (Exception e)
+            {
+                System.out.println(getSnarkyRemark());
+            }
+        }
+        /*
+        else if (move.equals("down"))
         {
             Room[] j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
             for (int i = 0; i < j.length; i++)
@@ -110,7 +140,7 @@ public class Game
                 currentLevel.moveCurrentRoom(choice);
             }
         }
-        if (move.equals("down"))
+        else if (move.equals("left"))
         {
             Room[] j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
             for (int i = 0; i < j.length; i++)
@@ -124,7 +154,7 @@ public class Game
                 currentLevel.moveCurrentRoom(choice);
             }
         }
-        if (move.equals("left"))
+        else if (move.equals("right"))
         {
             Room[] j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
             for (int i = 0; i < j.length; i++)
@@ -138,30 +168,17 @@ public class Game
                 currentLevel.moveCurrentRoom(choice);
             }
         }
-        if (move.equals("right"))
-        {
-            Room[] j = currentLevel.getAvailableRooms(currentLevel.getCurrent());
-            for (int i = 0; i < j.length; i++)
-            {
-                System.out.println(i + ". " + j[i].getId());
-            }
-            System.out.println("Choose a room: ");
-            int choice = keyboard.nextInt();
-            if (choice >= 0 && choice < j.length)
-            {
-                currentLevel.moveCurrentRoom(choice);
-            }
-        }
-        if (move.equals("give up"))
+        */
+        else if (move.equals("give up"))
         {
             System.exit(0);
         }
-        if (move.equals("analyze"))
+        else if (move.equals("analyze"))
         {
             System.out.println(currentLevel.getCurrentRoom().getId());
             System.out.println(currentLevel.getCurrentRoom().getDescription());
         }
-        if (move.equals("pickup"))
+        else if (move.equals("pickup"))
         {
             if (currentLevel.getCurrentRoom().getItems() != null)
             {
@@ -169,23 +186,23 @@ public class Game
                 currentLevel.getCurrentRoom().setItems(null);
             }
         }
-        if (move.equals("open"))
+        else if (move.equals("open"))
         {
             
         }
-        if (move.equals("bag"))
+        else if (move.equals("bag"))
         {
             player.displayInventory();
         }
-        if (move.equals("attack"))
+        else if (move.equals("attack"))
         {
             
         }
-        if (move.equals("defend"))
+        else if (move.equals("defend"))
         {
             
         }
-        if (move.equals("item"))
+        else if (move.equals("item"))
         {
             player.displayInventory();
             System.out.println("What item would you like to use?");
@@ -201,11 +218,11 @@ public class Game
             }
             
         }
-        if (move.equals("run"))
+        else if (move.equals("run"))
         {
             
         }
-        if (move.equals("help"))
+        else if (move.equals("help"))
         {
             System.out.println("up: Moves the player up a room");
             System.out.println("down: Moves the player down a room");
@@ -221,6 +238,10 @@ public class Game
             System.out.println("run: ");
             System.out.println("give up: Ends the game");
             System.out.println("help: Prints all possible player commands");
+        }
+        else
+        {
+            System.out.println("Invalid Move");
         }
     }
 
@@ -272,6 +293,14 @@ public class Game
         }
         System.out.println("Good luck on your adventure " +name+ ". You will need it...\n\n\n");
         return type;
+    }
+    
+    public String getSnarkyRemark()
+    {
+        String[] rems = {"What even are you trying to do?", "I doughnut understand.",
+                "Who do you think you are, commanding me like that?"};
+        Random rnd = new Random();
+        return rems[rnd.nextInt(rems.length)];
     }
 
     /**

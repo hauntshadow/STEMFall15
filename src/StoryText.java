@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 public class StoryText
 {
     private static String dummyvalue = "";
+    private static final int TIME = 10;//Default value is 60
     public static void intro()
     { 
         dummyvalue += "[UNKNOWN VOICE]Hello? It's me, Thomas Lawing... But you may call me T-MONEY.\n";
@@ -133,7 +134,7 @@ public class StoryText
                 }
                 else
                 {
-                    TimeUnit.MILLISECONDS.sleep(60);
+                    TimeUnit.MILLISECONDS.sleep(TIME);
                     System.out.print(s.charAt(i));
                 }
             }
