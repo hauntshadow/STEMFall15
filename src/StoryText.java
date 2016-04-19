@@ -24,11 +24,11 @@ public class StoryText
         dummyvalue += "Bored, you start to read your Database I textbook.\n";
         dummyvalue += "After 255 seconds, your vision goes blurry, and the once barren wasteland turns into a color\n";
         dummyvalue += "that no one has ever seen before, with DR. T in the foreground!\n";
-        dummyvalue += "'" + Game.name + "!' says he. 'I know you are far away right now, but NEVER give up hope'\n";
-        dummyvalue += "'We believe in you, " + Game.name + "!' He then stepped to the right revealing a vision of your family\n";
+        dummyvalue += "'" + Game.name + "!' says he. 'I know you are far away right now, but NEVER give up hope.'\n";
+        dummyvalue += "'We believe in you, " + Game.name + "!' He then stepped to the right, revealing a vision of your family,\n";
         dummyvalue += " happy and smiling. You're starting to tear up. 'Good Luck!' says Dr. T as he vanishes.\n";
-        dummyvalue += "After collecting your thoughts, your sense of adventure is reinvigorated\n";
-        dummyvalue += "despite the obstacles, you march forward confidently into the icy tundra.\n";
+        dummyvalue += "After collecting your thoughts, your sense of adventure is reinvigorated.\n";
+        dummyvalue += "Despite the obstacles, you march forward confidently into the icy tundra.\n";
         typerPrint(dummyvalue);
     }
     public static void level2()
@@ -48,13 +48,13 @@ public class StoryText
     {
         dummyvalue = "";
         dummyvalue += "As you emerge from the fires of the volcano, you look over yourself and the burns you've inevitably sustained.\n";
-        dummyvalue += "There's a few minor burns on your arms and hands, but other than that and a few singed hairs on your face, you've made it out alright.\n";
+        dummyvalue += "There's a few minor burns on your arms and hands, but other than that, and a few singed hairs on your face, you've made it out alright.\n";
         dummyvalue += "You take a look around and begin to notice your surroundings.\nYou don't seem to recognize any of the landmarks that you used for direction just a few hours earlier.\n";
         dummyvalue += "The eruption has drastically changed the landscape around you.\nThe wreckage of your ship, usually visible from the peak of the volcano, is now covered in magma spewing from every crevice in the ground.\n";
         dummyvalue += "You make your way down the rest of the slope and gradually begin walking back out into the wasteland that you fear may soon become your grave.\n";
         dummyvalue += "You find a rock structure in the shape of a chair that looks comfortable enough to sit on and begin to contemplate your next plan of action.\n";
-        dummyvalue += "As you look up, you see what must be a mirage of a ship breaking orbit and landing far away from you.\nIt must be the heat coming from the lava paired with dehydration playing tricks on your mind.\n";
-        dummyvalue += "You recline back and take out your canteen, cherishing the last few drops of water that emerge from it.\nYou think of your home back on earth, and realize you've forgotten many things you once held dear.\n";
+        dummyvalue += "As you look up, you see what must be a mirage of a ship breaking orbit and landing far away from you.\nIt must be the heat coming from the lava, paired with dehydration, playing tricks on your mind.\n";
+        dummyvalue += "You recline back and take out your canteen, cherishing the last few drops of water that emerge from it.\nYou think of your home back on Earth, and realize you've forgotten many things you once held dear.\n";
         dummyvalue += "It makes you think of the Mount Doom scene in the third Lord of the Rings movie, after the ring is destroyed.\nAlthough you miss your home, survival is still on your mind, so you begin to think of your next action.\n";
         dummyvalue += "As you gather yourself and think of the past day's events, you see a hazy vision approaching on the horizon.\n";
         dummyvalue += "'Could it be?' you ask yourself.\nAs he comes closer and closer, you begin to realize, it is him.\n";
@@ -64,29 +64,29 @@ public class StoryText
     {
         dummyvalue = "";
         dummyvalue += "'I never doubted you " + Game.name + "'\n";
-        dummyvalue += "Yes... It was him, or at least a vision of him\n";
-        dummyvalue += "You run up to him to give him a handshake or even a hug if he would allow it\n";
-        dummyvalue += "Though you know he isnt real, you hold onto him and cry as his hand phases\n";
+        dummyvalue += "Yes... It was him, or at least a vision of him.\n";
+        dummyvalue += "You run up to him to give him a handshake or even a hug if he would allow it.\n";
+        dummyvalue += "Though you know he isn't real, you hold onto him and cry as his hand phases\n";
         dummyvalue += "through you in an attempt to pat your back.\n";
-        dummyvalue += "Wiping away the tears with your cosmonaut special edition hankerchief you\n";
-        dummyvalue += "refocus and listen to what he has to say\n";
-        dummyvalue += "'From the moment you got to this planet you have had a look in your eye,\n";
-        dummyvalue += " you were scared' ... Dr. T looked down and paused with a grim look on his face\n";
-        dummyvalue += "'But, you also had the determination and hope to continue your journey' \n";
-        dummyvalue += "as he said this his face lit back up like the fourth of july and he had a smile\n";
-        dummyvalue += "that could cure cancer\n";
+        dummyvalue += "Wiping away the tears with your cosmonaut special edition hankerchief, you\n";
+        dummyvalue += "refocus and listen to what he has to say.\n";
+        dummyvalue += "'From the moment you got to this planet, you have had a look in your eye.\n";
+        dummyvalue += "You were scared' ... Dr. T looked down and paused with a grim look on his face.\n";
+        dummyvalue += "'But, you also had the determination and hope to continue your journey'. \n";
+        dummyvalue += "As he said this, his face lit back up like the Fourth of July, and he had a smile\n";
+        dummyvalue += "that could cure cancer.\n";
         dummyvalue += "'It's not just because we belived in you' he started as your family stood next to\n";
-        dummyvalue += "you, 'It's because you believed in yourself " + Game.name + "'\n";
-        dummyvalue += "As you cry one last time on this planet, you walk towards the ship\n";
-        dummyvalue += "And waving before you go home, Dr.T and your family hold hands and sing this ballad\n";
+        dummyvalue += "you. 'It's because you believed in yourself " + Game.name + "'\n";
+        dummyvalue += "As you cry one last time on this planet, you walk towards the ship.\n";
+        dummyvalue += "Waving before you go home, Dr.T and your family congratulate you on your achievement.\n";
         dummyvalue += "...\n";
-        dummyvalue += "...\n";
+        /*dummyvalue += "...\n";
         dummyvalue += "...\n";
         dummyvalue += "SO TELL ME WHAT YOU WANT YOU REALLY REALLY WANT\n";
-        dummyvalue += "ILL TELL YOU WHAT I WANT WHAT I REALLY REALLY WANT\n";
+        dummyvalue += "I'LL TELL YOU WHAT I WANT WHAT I REALLY REALLY WANT\n";
         dummyvalue += "TELL ME WHAT YOU WANT WHAT YOU REALLY REALLY WANT\n";
-        dummyvalue += "ILL TELL YOU WHAT I WANT WHAT I REALLY REALLY WANT\n";
-        dummyvalue += "and thus you went home safely with many memories and a lot of information on mars\n";
+        dummyvalue += "I'LL TELL YOU WHAT I WANT WHAT I REALLY REALLY WANT\n";*/
+        dummyvalue += "And thus you went home safely, with many memories and a lot of information on Mars.\n";
         typerPrint(dummyvalue);
     }
     public static String bonus()
