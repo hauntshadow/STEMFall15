@@ -40,10 +40,12 @@ public abstract class Player extends Character
     
     public void use(int i)
     {
+    	Item item = null;
         if (i > 0 && i < inventory.size())
         {
-            Item item = inventory.get(i);
+            item = inventory.get(i);
         }
+        inventory.remove(item);
     }
 
     public boolean has(Item item)

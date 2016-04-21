@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+
 public class ActualRooms 
 {
     public static final Room r1 = new Room("Cryogenic Chamber", "The room where astronauts are stored during long flights.\n", new Room[4]);
@@ -52,6 +52,35 @@ public class ActualRooms
     public static final Room r49 = new Room("c24", "A room in level 3\n", new Room[4]);
     public static final Room r50 = new Room("c25", "A room in level 3\nThe ending point in level 3", new Room[4]);
     
+  //Weapons
+    public static final Item CROWBAR = new Item("Crowbar", "For bashing skulls and/or opening doors.");
+    public static final Item HAMMER = new Item("Hammer","For hammering skulls and/or prying open doors.");
+    public static final Item RAYGUN = new Item("Raygun", "For blasting skulls and/or opening doors maybe?.");
+    public static final Item FLIGHTSUIT = new Item("Flight Suit","The standard attire for a true space explorer.");
+    public static final Item SPACESUIT = new Item("Space Suit", "Can withstand the harshest of envoronments.");
+    public static final Item METALPLATING = new Item("Metal Plating", "Strong metal plating used to shield the hull.");
+    //Progression Items
+    public static final Item OXYGEN = new Item("Oxygen Tank","You can breath this.");
+    public static final Item SHOES = new Item("Galactic Shoes","Used to reach greater heights.");
+    public static final Item SPACEBIKE = new Item("Space Bike", "Used to cross large distances.");
+    
+    //Life and health
+    public static final Item MEDKIT = new Item("Medkit", "You can use this to heal yourself.");
+    public static final Item PIZZA = new Item("Mars Pizza","Delicious pizza! Grown and cooked on Mars.");
+    public static final Item FOODBAR = new Item("Martian Bar","A tasty treat that will also restore some health.");
+    public static final Item WATER = new Item("Water","H20.");
+    //Obstacles
+    public static final Obstacle BATS = new Obstacle("Bats", "A swarm of bats attack!");
+    public static final Obstacle PITFALL = new Obstacle("Pitfall", "A pit that you fall into.");
+    public static final Obstacle ACIDPUDDLE = new Obstacle("Acid Puddle", "You probably should not step in this.");
+    public static final Obstacle ANDROIDS = new Obstacle("Androids", "A squad of lethal android assassians.");public static final Obstacle ROCKSLIDE = new Obstacle("Rock Slide", "A slide of rocks!");
+    public static final Obstacle POISONOUSPLANT = new Obstacle("A friendly plant", "Possibly has medicinal purposes.");
+    public static final Obstacle SIREN = new Obstacle("Siren", "Try asking it to sing.");
+    public static final Obstacle PIRATES = new Obstacle("Space Pirates", "Hide yer booty.");
+    public static final Obstacle CURIOSITY = new Obstacle("The Curiosity Rover", "Abandoned as a pup, it lives in the middle of nowhere.");
+    public static final Obstacle SHIPDEFENSE = new Obstacle("Ship defense systems", "The automated defenses responsible for keeping the ship safe.");
+    
+    
     public Level getLevel1()
     {
         Room[] rooms = {r1, r2, r3, r4, r5, r6, r7, r8, r9};
@@ -65,7 +94,7 @@ public class ActualRooms
         r8.setAdjRooms(new Room[]{r5, r7, r9});
         r9.setAdjRooms(new Room[]{r6, r8});
         
-        return new Level(rooms, null, null, "Airlock");
+        return new Level(rooms, new Item[]{CROWBAR, HAMMER, RAYGUN, FLIGHTSUIT, OXYGEN, MEDKIT}, new Obstacle[]{}, "Airlock");
     }
     public Level getLevel2()
     {
@@ -87,7 +116,7 @@ public class ActualRooms
         r24.setAdjRooms(new Room[]{r20, r23, r25});
         r25.setAdjRooms(new Room[]{r21, r24});
         
-        return new Level(rooms, null, null, "b16");
+        return new Level(rooms, new Item[]{SPACESUIT, SHOES, PIZZA, FOODBAR}, new Obstacle[]{BATS, PITFALL, ACIDPUDDLE, ANDROIDS, POISONOUSPLANT}, "b16");
     }
     public Level getLevel3()
     {
@@ -119,6 +148,6 @@ public class ActualRooms
         r49.setAdjRooms(new Room[]{r44, r48, r50});
         r50.setAdjRooms(new Room[]{r45, r49});
         
-        return new Level(rooms, null, null, "c25");
+        return new Level(rooms, new Item[]{METALPLATING, SPACEBIKE, FOODBAR, WATER}, new Obstacle[]{ANDROIDS, POISONOUSPLANT, SIREN, PIRATES, CURIOSITY, SHIPDEFENSE}, "c25");
     }
 }
