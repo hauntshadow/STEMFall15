@@ -93,8 +93,24 @@ public class ActualRooms
         r7.setAdjRooms(new Room[]{r4, r8});
         r8.setAdjRooms(new Room[]{r5, r7, r9});
         r9.setAdjRooms(new Room[]{r6, r8});
+        if(Game.player instanceof Wielder)
+        {
+        	return new Level(rooms, new Item[]{CROWBAR, FLIGHTSUIT, OXYGEN, 
+        			MEDKIT}, new Obstacle[]{}, "Airlock");
+        }
+        else if(Game.player instanceof Hammerer)
+        {
+        	return new Level(rooms, new Item[]{HAMMER, FLIGHTSUIT, OXYGEN, 
+        			MEDKIT}, new Obstacle[]{}, "Airlock");
+        }
+        else if(Game.player instanceof Gunslinger)
+        {
+        	return new Level(rooms, new Item[]{RAYGUN, FLIGHTSUIT, OXYGEN, 
+        			MEDKIT}, new Obstacle[]{}, "Airlock");
+        }
+        return new Level(rooms, new Item[]{FLIGHTSUIT, OXYGEN, 
+    			MEDKIT}, new Obstacle[]{}, "Airlock");
         
-        return new Level(rooms, new Item[]{CROWBAR, HAMMER, RAYGUN, FLIGHTSUIT, OXYGEN, MEDKIT}, new Obstacle[]{}, "Airlock");
     }
     public Level getLevel2()
     {

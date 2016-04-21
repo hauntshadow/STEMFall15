@@ -17,8 +17,8 @@ public class Level
       current = 0;
       this.destination = destination;
       
-      //putObstaclesInRooms(this.obstacles, this.rooms);
-      //putItemsInRooms(this.items, this.rooms);
+      putObstaclesInRooms(this.obstacles, this.rooms);
+      putItemsInRooms(this.items, this.rooms);
   }
   
   public void putObstaclesInRooms(Obstacle[] obstacles, Room[] rooms)
@@ -71,9 +71,9 @@ public class Level
 	public void setCurrent(int current) {
 		this.current = current;
 	}
-	public boolean isLevelOver()
+	public boolean isLevelOver(Player player)
 	{
-	    return destination.equals(rooms[current].getId());
+	    return destination.equals(rooms[current].getId()) || player.getCurrentHealthVal() <= 0;
 	}
 	public ArrayList<String> findItem(Item item)
 	{
@@ -119,8 +119,56 @@ public class Level
 	        if (room == rooms[i])
 	        {
 	            current = i;
+	            if(room.getObstacles() != null)
+	            {
+	            	damaged(room.getObstacles());
+	            }
 	            break;
 	        }
 	    }
+	}
+
+	private void damaged(Obstacle obstacle) {
+		int health = Game.player.getCurrentHealthVal();
+		if(obstacle == ActualRooms.ACIDPUDDLE)
+		{
+			Game.player.setCurrentHealthVal(health - 3);
+		}
+		else if(obstacle == ActualRooms.ANDROIDS)
+		{
+			Game.player.setCurrentHealthVal(health - 6);
+		}
+		else if(obstacle == ActualRooms.BATS)
+		{
+			Game.player.setCurrentHealthVal(health - 2);
+		}
+		else if(obstacle == ActualRooms.CURIOSITY)
+		{
+			Game.player.setCurrentHealthVal(health - 4);
+		}
+		else if(obstacle == ActualRooms.PIRATES)
+		{
+			Game.player.setCurrentHealthVal(health - 4);
+		}
+		else if(obstacle == ActualRooms.PITFALL)
+		{
+			Game.player.setCurrentHealthVal(health - 1);
+		}
+		else if(obstacle == ActualRooms.POISONOUSPLANT)
+		{
+			Game.player.setCurrentHealthVal(health - 6);
+		}
+		else if(obstacle == ActualRooms.ROCKSLIDE)
+		{
+			Game.player.setCurrentHealthVal(health - 3);
+		}
+		else if(obstacle == ActualRooms.SHIPDEFENSE)
+		{
+			Game.player.setCurrentHealthVal(health - 9);
+		}
+		else if(obstacle == ActualRooms.SIREN)
+		{
+			Game.player.setCurrentHealthVal(health - 5);
+		}		
 	}
 }

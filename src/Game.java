@@ -9,7 +9,7 @@ public class Game
 {
     
     public static String name;
-    private Player player;
+    public static Player player;
     private Scanner keyboard;
     private static Game game;
     private Level currentLevel;
@@ -41,26 +41,41 @@ public class Game
         
         ActualRooms actual = new ActualRooms();
         currentLevel = actual.getLevel1();
-        while (!currentLevel.isLevelOver())
+        while (!currentLevel.isLevelOver(player))
         {
             wat = keyboard.nextLine();
             makeMove(wat);
+        }
+        if(player.getCurrentHealthVal() <= 0)
+        {
+        	System.out.println("Sorry. You died. Better luck next time!");
+        	System.exit(0);
         }
         StoryText.level1();
         
         currentLevel = actual.getLevel2();
-        while (!currentLevel.isLevelOver())
+        while (!currentLevel.isLevelOver(player))
         {
             wat = keyboard.nextLine();
             makeMove(wat);
         }
+        if(player.getCurrentHealthVal() <= 0)
+        {
+        	System.out.println("Sorry. You died. Better luck next time!");
+        	System.exit(0);
+        }
         StoryText.level2();
         
         currentLevel = actual.getLevel3();
-        while (!currentLevel.isLevelOver())
+        while (!currentLevel.isLevelOver(player))
         {
             wat = keyboard.nextLine();
             makeMove(wat);
+        }
+        if(player.getCurrentHealthVal() <= 0)
+        {
+        	System.out.println("Sorry. You died. Better luck next time!");
+        	System.exit(0);
         }
         keyboard.close();
         StoryText.level3();
@@ -152,10 +167,40 @@ public class Game
         }
         else if (move.equals("pickup"))
         {
-            if (currentLevel.getCurrentRoom().getItems() != null)
+        	Item thing = currentLevel.getCurrentRoom().getItems();
+            if (thing != null)
             {
-                player.addToInventory(currentLevel.getCurrentRoom().getItems());
+                player.addToInventory(thing);
                 currentLevel.getCurrentRoom().setItems(null);
+                if(thing == ActualRooms.CROWBAR || thing == ActualRooms.HAMMER 
+                		|| thing == ActualRooms.RAYGUN)
+                {
+                	player.setAttackVal(2 * player.getAttackVal());
+                }
+                else if(thing == ActualRooms.FLIGHTSUIT)
+                {
+                	player.setDefenseVal(player.getDefenseVal() + 5);
+                }
+                else if(thing == ActualRooms.SPACESUIT && player.has(ActualRooms.FLIGHTSUIT))
+                {
+                	player.setDefenseVal(player.getDefenseVal() + 5);
+                }
+                else if(thing == ActualRooms.SPACESUIT)
+                {
+                	player.setDefenseVal(player.getDefenseVal() + 10);
+                }
+                else if(thing == ActualRooms.METALPLATING && player.has(ActualRooms.SPACESUIT))
+                {
+                	player.setDefenseVal(player.getDefenseVal() + 5);
+                }
+                else if(thing == ActualRooms.METALPLATING && player.has(ActualRooms.FLIGHTSUIT))
+                {
+                	player.setDefenseVal(player.getDefenseVal() + 10);
+                }
+                else if(thing == ActualRooms.METALPLATING)
+                {
+                	player.setDefenseVal(player.getDefenseVal() + 15);
+                }
             }
         }
         else if (move.equals("open"))

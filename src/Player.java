@@ -15,6 +15,7 @@ public abstract class Player extends Character
         this.attackVal = attackVal;
         this.defenseVal = defenseVal;
         this.currentHealthVal = currentHealthVal;
+        this.maxHealthVal = currentHealthVal;
         this.name = name;
         inventory = new ArrayList<Item>();
     }
@@ -40,15 +41,45 @@ public abstract class Player extends Character
     
     public void use(int i)
     {
-    	Item item = null;
         if (i > 0 && i < inventory.size())
         {
-            item = inventory.get(i);
+            Item item = inventory.get(i);
+            inventory.remove(item);
+            if(item == ActualRooms.MEDKIT)
+            {
+            	setCurrentHealth(currentHealthVal + 5);
+            }
+            else if(item == ActualRooms.PIZZA)
+            {
+            	setCurrentHealth(currentHealthVal + 10);
+            }
+            else if(item == ActualRooms.FOODBAR)
+            {
+            	setCurrentHealth(currentHealthVal + 15);
+            }
+            else if(item == ActualRooms.WATER)
+            {
+            	setCurrentHealth(currentHealthVal + 20);
+            }
         }
-        inventory.remove(item);
+        else
+        {
+        	System.out.println("Invalid item choice.");
+        }
     }
 
-    public boolean has(Item item)
+    private void setCurrentHealth(int i) {
+		if(i > maxHealthVal)
+		{
+			currentHealthVal = maxHealthVal;
+		}
+		else
+		{
+			currentHealthVal = i;
+		}
+	}
+
+	public boolean has(Item item)
     {
         boolean found = false;
         for (Item i : inventory)
