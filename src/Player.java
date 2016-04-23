@@ -20,6 +20,41 @@ public abstract class Player extends Character
         inventory = new ArrayList<Item>();
     }
     
+    public int getMaxHealthVal()
+    {
+        return maxHealthVal;
+    }
+
+    public void setMaxHealthVal(int maxHealthVal)
+    {
+        this.maxHealthVal = maxHealthVal;
+    }
+
+    public int getAttackVal()
+    {
+        return attackVal;
+    }
+
+    public void setAttackVal(int attackVal)
+    {
+        this.attackVal = attackVal;
+    }
+
+    public int getDefenseVal()
+    {
+        return defenseVal;
+    }
+
+    public void setDefenseVal(int defenseVal)
+    {
+        this.defenseVal = defenseVal;
+    }
+
+    public int getCurrentHealthVal()
+    {
+        return currentHealthVal;
+    }
+
     public ArrayList<Item> getInventory()
     {
         return inventory;
@@ -27,6 +62,7 @@ public abstract class Player extends Character
     
     public void addToInventory(Item i)
     {
+        System.out.println(i.getName() + " added to bag.");
         inventory.add(i);
     }
     

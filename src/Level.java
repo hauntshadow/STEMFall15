@@ -71,10 +71,54 @@ public class Level
 	public void setCurrent(int current) {
 		this.current = current;
 	}
-	public boolean isLevelOver(Player player)
+	public boolean isLevel1Over(Player player)
 	{
-	    return destination.equals(rooms[current].getId()) || player.getCurrentHealthVal() <= 0;
+	    if(destination.equals(rooms[current].getId()))
+	    {
+	        if(!player.has(ActualRooms.FLIGHTSUIT))
+	        {
+	            System.out.println("You still need the flight suit...");
+	        }
+	        if(!player.has(ActualRooms.OXYGEN))
+            {
+                System.out.println("You still need the oxygen tank...");
+            }
+	    }
+	    return (destination.equals(rooms[current].getId()) && player.has(ActualRooms.FLIGHTSUIT)
+	        && player.has(ActualRooms.OXYGEN)) || player.getCurrentHealthVal() <= 0;
 	}
+	public boolean isLevel2Over(Player player)
+    {
+	    if(destination.equals(rooms[current].getId()))
+        {
+            if(!player.has(ActualRooms.SPACESUIT))
+            {
+                System.out.println("You still need the upgrade your suit...");
+            }
+            if(!player.has(ActualRooms.SHOES))
+            {
+                System.out.println("You still need special space shoes...");
+            }
+        }
+        return (destination.equals(rooms[current].getId()) && player.has(ActualRooms.SPACESUIT)
+            && player.has(ActualRooms.SHOES)) || player.getCurrentHealthVal() <= 0;
+    }
+	public boolean isLevel3Over(Player player)
+    {
+	    if(destination.equals(rooms[current].getId()))
+        {
+            if(!player.has(ActualRooms.METALPLATING))
+            {
+                System.out.println("You still need the ultimate space suit...");
+            }
+            if(!player.has(ActualRooms.SPACEBIKE))
+            {
+                System.out.println("You still need the transportation to get home... Maybe a bike?");
+            }
+        }
+        return (destination.equals(rooms[current].getId()) && player.has(ActualRooms.METALPLATING)
+            && player.has(ActualRooms.SPACEBIKE)) || player.getCurrentHealthVal() <= 0;
+    }
 	public ArrayList<String> findItem(Item item)
 	{
 		ArrayList<String> foo = new ArrayList<String>();

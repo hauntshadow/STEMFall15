@@ -41,7 +41,7 @@ public class Game
         
         ActualRooms actual = new ActualRooms();
         currentLevel = actual.getLevel1();
-        while (!currentLevel.isLevelOver(player))
+        while (!currentLevel.isLevel1Over(player))
         {
             wat = keyboard.nextLine();
             makeMove(wat);
@@ -54,7 +54,7 @@ public class Game
         StoryText.level1();
         
         currentLevel = actual.getLevel2();
-        while (!currentLevel.isLevelOver(player))
+        while (!currentLevel.isLevel2Over(player))
         {
             wat = keyboard.nextLine();
             makeMove(wat);
@@ -67,7 +67,7 @@ public class Game
         StoryText.level2();
         
         currentLevel = actual.getLevel3();
-        while (!currentLevel.isLevelOver(player))
+        while (!currentLevel.isLevel3Over(player))
         {
             wat = keyboard.nextLine();
             makeMove(wat);
@@ -202,6 +202,10 @@ public class Game
                 	player.setDefenseVal(player.getDefenseVal() + 15);
                 }
             }
+            else
+            {
+                System.out.println("Nothing to pick up here...");
+            }
         }
         else if (move.equals("open"))
         {
@@ -247,25 +251,25 @@ public class Game
             System.out.println("right: Moves the player right a room");
             System.out.println("analyze: Describes the player's current room");
             System.out.println("pickup: Adds the items in the room to the player's inventory");
-            System.out.println("open: ");
+            //System.out.println("open: ");
             System.out.println("bag: Displays the player's inventory");
-            System.out.println("attack: ");
-            System.out.println("defend: ");
+            //System.out.println("attack: ");
+            //System.out.println("defend: ");
             System.out.println("item: Allows the player to use an item from their inventory");
-            System.out.println("run: ");
+            //System.out.println("run: ");
             System.out.println("give up: Ends the game");
             System.out.println("help: Prints all possible player commands");
         }
         else
         {
-            System.out.println("Invalid Move");
+            System.out.println("Invalid Move. " + getSnarkyRemark());
         }
     }
 
     /**
      * Create the player object for our game.
      */
-    public String createPlayer()
+    public Player createPlayer()
     {
         System.out.println("What type of character would you like to be?");
         String type;
@@ -309,7 +313,7 @@ public class Game
             createPlayer();
         }
         System.out.println("Good luck on your adventure " +name+ ". You will need it...\n\n\n");
-        return type;
+        return player;
     }
     
     public String getSnarkyRemark()
