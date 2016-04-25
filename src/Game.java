@@ -245,10 +245,7 @@ public class Game
         }
         else if (move.equals("help"))
         {
-            System.out.println("up: Moves the player up a room");
-            System.out.println("down: Moves the player down a room");
-            System.out.println("left: Moves the player left a room");
-            System.out.println("right: Moves the player right a room");
+            System.out.println("move: Allows the character to move about the level");
             System.out.println("analyze: Describes the player's current room");
             System.out.println("pickup: Adds the items in the room to the player's inventory");
             //System.out.println("open: ");
